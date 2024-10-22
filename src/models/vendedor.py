@@ -17,3 +17,5 @@ class vendedor(Base):
         self.telefono = telefono
         self.direccion = direccion
         self.fecha_ingreso = fecha_ingreso
+
+        #continuacion 

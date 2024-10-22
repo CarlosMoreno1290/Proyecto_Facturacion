@@ -1,5 +1,10 @@
 from flask import Flask, render_template
 from src.models import Base, engine 
+from src.models.productos import Productos 
+from src.models.categorias import Categorias 
+from src.models.cliente import cliente
+from src.models.vendedor import vendedor
+
 
 app = Flask(__name__)
 
