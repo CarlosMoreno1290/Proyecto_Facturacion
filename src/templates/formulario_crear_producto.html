@@ -1,30 +1,30 @@
 {% extends 'layout.html' %}
 
 {% block contenido %}
-<form action="tabla_productos.html">
+<form action="agregar_producto" method="post">
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="descripcion">Descripción Producto</label>
-      <input type="text" class="form-control" id="descripcion" placeholder="Descripción Producto">
+      <input type="text" class="form-control" id="descripcion" name="descripcion" placeholder="Descripción Producto">
     </div>
     <div class="form-group col-md-6">
       <label for="Cantidad_Stock">Cantidad Stock</label>
-      <input type="text" class="form-control" id="Cantidad_Stock" placeholder="Cantidad Stock">
+      <input type="text" class="form-control" id="Cantidad_Stock" name="Cantidad_Stock" placeholder="Cantidad Stock">
     </div>
     <div class="form-group col-md-6">
       <label for="Unidad_Medida">Unidad Medida</label>
-      <input type="text" class="form-control" id="Unidad_Medida" placeholder="Unidad Medida">
+      <input type="text" class="form-control" id="Unidad_Medida" name="Unidad_Medida" placeholder="Unidad Medida">
     </div>
     <div class="form-group col-md-6">
       <label for="valor_unitario">Valor Unitario</label>
-      <input type="text" class="form-control" id="valor_unitario" placeholder="Valor Unitario">
+      <input type="text" class="form-control" id="valor_unitario" name="valor_unitario" placeholder="Valor Unitario">
     </div>
 
   </div>
   
     <div class="form-group col-md-4">
       <label for="categoria">Categoria</label>
-      <select id="categoria" class="form-control">
+      <select id="categoria" name="categoria" class="form-control">
           <option selected>Seleccione...</option>
           <option value="1">Alimentos</option>
           <option value="2">Calzado</option>
