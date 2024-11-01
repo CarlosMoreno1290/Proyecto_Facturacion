@@ -2,8 +2,8 @@ from flask import Flask, render_template, request, redirect, url_for
 from src.models import Base, engine 
 from src.models.productos import Productos 
 from src.models.categorias import Categorias 
-from src.models.cliente import cliente
-from src.models.vendedor import vendedor
+from src.models.cliente import Clientes
+from src.models.vendedor import Vendedor
 
 
 app = Flask(__name__)
@@ -26,9 +26,9 @@ def crear_producto():
         Cantidad_Stock = request.form.get('Cantidad_Stock')
         Categoria = request.form.get('Categoria')
         producto = Productos(descripcion,valor_unitario,Unidad_Medida,Cantidad_Stock,Categoria)
-        Productos.agregar_producto(producto)
+        Productos.crear_producto(producto)
         return redirect(url_for('ver_producto'))
-    return render_template('formulario_crear_producto.html', titulo_pagina = 'Crear Producto')
+    return render_template('formulario_producto.html', titulo_pagina = 'Crear Producto')
 
 @app.route('/ver_productos')
 def ver_productos():
@@ -37,7 +37,7 @@ def ver_productos():
 
 @app.route('/crear_vendedor')
 def crear_vendedor():
-    return render_template('formulario_crear_vendedor.html', titulo_pagina = 'Crear vendedor')
+    return render_template('formulario_vendedor.html', titulo_pagina = 'Crear vendedor')
 
 @app.route('/ver_vendedor')
 def ver_vendedor():
@@ -45,7 +45,7 @@ def ver_vendedor():
 
 @app.route('/crear_cliente')
 def crear_cliente():
-    return render_template('formulario_crear_cliente.html', titulo_pagina = 'Crear cliente')
+    return render_template('formulario_cliente.html', titulo_pagina = 'Crear cliente')
 
 @app.route('/ver_cliente')
 def ver_cliente():

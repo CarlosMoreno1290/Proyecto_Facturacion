@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+
+{% block contenido %}   
+      <form action="tabla_cliente.html">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="nombre_cliente">nombre_cliente</label>
+            <input type="text" class="form-control" id="nombre_cliente" name="nombre_cliente" placeholder="nombre Cliente">
+          </div>          
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="numero_identificacion">numero_identificacion</label>
+              <input type="text" class="form-control" id="numero_identificacion" name="numero_identificacion" placeholder="numero identificacion">
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="telefono">telefono</label>
+                <input type="text" class="form-control" id="telefono"name="telefono" placeholder="telefono">
+              </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="direccion">telefono</label>
+                  <input type="text" class="form-control" id="direccion" name="direccion" placeholder="direccion">
+                </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="email">email</label>
+                <input type="text" class="form-control" id="email" name="email" placeholder="email">
+        </div>                 
+        <button type="submit" class="btn btn-primary">Guardar</button>
+      </form>
+      {% endblock contenido %}

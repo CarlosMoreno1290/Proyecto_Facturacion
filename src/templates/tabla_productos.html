@@ -7,24 +7,22 @@
       <th scope="col">id</th>
       <th scope="col">Descripción</th>
       <th scope="col">Valor Unitario</th>
-      <th scope="col">Unidad_Medida</th>
-      <th scope="col">Cantidad_Stock</th>
+      <th scope="col">Unidad Medida</th>
+      <th scope="col">Cantidad Stock</th>
       <th scope="col">Categoria</th>
     </tr>
   </thead>
   <tbody>
-      {for producto in productos %}
-      <tr>      
-        <th scope="row">{{producto.id}}</th>
-        <td>{{producto.Descripción}}</td>
-        <td>{{producto.Valor Unitario}}</td>
-        <td>{{producto.Unidad_Medida}}</td>
-        <td>{{producto.Cantidad_Stock}}</td>
-        <td>{{producto.Categoria}}</td>
-      </tr>
-      {% endfor %}
-    
+      {% for producto in productos %}
+        <tr>      
+          <th scope="row">{{producto.id}}</th>
+          <td>{{producto.Descripción}}</td>
+          <td>{{producto.Valor_Unitario}}</td>
+          <td>{{producto.Unidad_Medida}}</td>
+          <td>{{producto.Cantidad_Stock}}</td>
+          <td>{{producto.Categoria}}</td>
+        </tr>
+      {% endfor%}    
   </tbody>
 </table>
-{% endblock contenido %}    
-     
+{% endblock contenido %}   
